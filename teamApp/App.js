@@ -1,13 +1,16 @@
 import React from 'react';
+import 'App.css';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Test this out!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+      <View className={container} style={styles.container}>
+        <Text>Welcome Matt!</Text>
+        <View className={chatDiv}></View>
+        <View className={scheduleDiv}></View>
+        <View className={suggestionDiv}></View>
+        <View className={managerDiv}></View>
       </View>
     );
   }
