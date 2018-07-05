@@ -1,16 +1,25 @@
 import React from 'react';
-import 'App.css';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default class App extends React.Component {
   render() {
     return (
-      <View className={container} style={styles.container}>
+      <View style={styles.container}>
         <Text>Welcome Matt!</Text>
-        <View></View>
-        <View></View>
-        <View></View>
-        <View></View>
+        <View style={styles.boxContainer}>
+          <View style={styles.chatDiv}>
+            <Text>Chat Div</Text>
+          </View>
+          <View style={styles.scheduleDiv}>
+            <Text>Schedule Div</Text>
+          </View>
+          <View style={styles.managerDiv}>
+            <Text>Manager Div</Text>
+          </View>
+          <View style={styles.bugsDiv}>
+            <Text>Bugs Div</Text>
+          </View>
+        </View>
       </View>
     );
   }
@@ -19,8 +28,29 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: 'column',
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
+  boxContainer: {
+    flex: 1,
+  },
+  chatDiv: {
+    flex: 1,
+    backgroundColor: 'blue',
+  },
+  scheduleDiv: {
+    width: '100%',
+    flex: 1,
+    backgroundColor: 'lightblue',
+  },
+  managerDiv: {
+    width: '100%',
+    flex: 1,
+    backgroundColor: 'green',
+  },
+  bugsDiv: {
+    width: '100%',
+    flex: 1,
+    backgroundColor: 'orange',
+  }
 });
