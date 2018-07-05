@@ -7,10 +7,10 @@ export default class App extends React.Component {
     return (
       <View className={container} style={styles.container}>
         <Text>Welcome Matt!</Text>
-        <View className={chatDiv}></View>
-        <View className={scheduleDiv}></View>
-        <View className={suggestionDiv}></View>
-        <View className={managerDiv}></View>
+        <View></View>
+        <View></View>
+        <View></View>
+        <View></View>
       </View>
     );
   }
