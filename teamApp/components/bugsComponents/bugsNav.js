@@ -5,7 +5,7 @@ export default class BugsNav extends React.Component {
         render() {
             return (
                 <View style={styles.bugsDiv}>
-                    <Text>Bugs Div</Text>
+                    <Text>Suggestions</Text>
                 </View>
             )
         }   
@@ -13,8 +13,9 @@ export default class BugsNav extends React.Component {
 
 const styles = StyleSheet.create({
     bugsDiv: {
-        width: '100%',
         flex: 1,
         backgroundColor: 'orange',
+        justifyContent: 'center',
+        alignItems: 'center'
       }
 })

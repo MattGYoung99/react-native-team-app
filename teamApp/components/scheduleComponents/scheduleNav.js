@@ -5,7 +5,7 @@ export default class ScheduleNav extends React.Component {
     render() {
         return (
             <View style={styles.scheduleDiv}>
-                <Text>Schedule Div</Text>
+                <Text>Schedule</Text>
             </View>
         )
     }
@@ -13,8 +13,9 @@ export default class ScheduleNav extends React.Component {
 
 const styles = StyleSheet.create({
     scheduleDiv: {
-        width: '100%',
         flex: 1,
         backgroundColor: 'lightblue',
+        justifyContent: 'center',
+        alignItems: 'center'
       }
 })

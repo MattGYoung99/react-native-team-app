@@ -5,7 +5,7 @@ export default class ChatNav extends React.Component {
         render() {
             return (
                 <View style={styles.chatDiv}>
-                    <Text>Chat Div</Text>
+                    <Text>Chat</Text>
                 </View>
             )
     }
@@ -15,5 +15,7 @@ const styles = StyleSheet.create({
     chatDiv: {
         flex: 1,
         backgroundColor: 'blue',
+        justifyContent: 'center',
+        alignItems: 'center'
     },
 })

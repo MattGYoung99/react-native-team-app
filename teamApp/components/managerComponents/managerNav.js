@@ -5,7 +5,7 @@ export default class ManagerNav extends React.Component {
     render() {
         return (
             <View style={styles.managerDiv}>
-                <Text>Manager Div</Text>
+                <Text>Manager</Text>
             </View>
         )
     }
@@ -13,8 +13,9 @@ export default class ManagerNav extends React.Component {
 
 const styles = StyleSheet.create({
     managerDiv: {
-        width: '100%',
         flex: 1,
         backgroundColor: 'green',
+        justifyContent: 'center',
+        alignItems: 'center'
       }
 })
