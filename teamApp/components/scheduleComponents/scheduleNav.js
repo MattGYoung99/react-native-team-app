@@ -6,7 +6,7 @@ export default class ScheduleNav extends React.Component {
     render() {
         return (
             <View style={styles.scheduleDiv}>
-                <Icon name='ios-calendar' size={90}/>
+                <Icon name='ios-calendar' color="#fff" size={90}/>
                 <Text>Schedule</Text>
             </View>
         )
@@ -16,7 +16,10 @@ export default class ScheduleNav extends React.Component {
 const styles = StyleSheet.create({
     scheduleDiv: {
         flex: 1,
-        backgroundColor: 'lightblue',
+        borderRadius: 4,
+        borderWidth: 0.5,
+        borderColor: '#000000',
+        backgroundColor: '#43AD29',
         justifyContent: 'center',
         alignItems: 'center'
       }

@@ -6,7 +6,7 @@ export default class BugsNav extends React.Component {
         render() {
             return (
                 <View style={styles.bugsDiv}>
-                    <Icon name='ios-bulb' size={90}/>
+                    <Icon name='ios-bulb' color="#fff" size={90}/>
                     <Text>Suggestions</Text>
                 </View>
             )
@@ -16,7 +16,10 @@ export default class BugsNav extends React.Component {
 const styles = StyleSheet.create({
     bugsDiv: {
         flex: 1,
-        backgroundColor: 'orange',
+        borderRadius: 4,
+        borderWidth: 0.5,
+        borderColor: '#000000',
+        backgroundColor: '#43AD29',
         justifyContent: 'center',
         alignItems: 'center'
       }

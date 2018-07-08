@@ -6,7 +6,7 @@ export default class ChatNav extends React.Component {
         render() {
             return (
                 <View style={styles.chatDiv}>
-                    <Icon name='comments' size={90}/>
+                    <Icon name='comments' color="#fff" size={90}/>
                     <Text>Chat</Text>
                 </View>
             )
@@ -16,7 +16,10 @@ export default class ChatNav extends React.Component {
 const styles = StyleSheet.create({
     chatDiv: {
         flex: 1,
-        backgroundColor: 'blue',
+        borderRadius: 4,
+        borderWidth: 0.5,
+        borderColor: '#000000',
+        backgroundColor: '#43AD29',
         justifyContent: 'center',
         alignItems: 'center'
     },

@@ -6,7 +6,7 @@ export default class ManagerNav extends React.Component {
     render() {
         return (
             <View style={styles.managerDiv}>
-                <Icon name='user-secret' size={90}/>
+                <Icon name='user-secret' color="#fff" size={90}/>
                 <Text>Manager</Text>
             </View>
         )
@@ -16,7 +16,10 @@ export default class ManagerNav extends React.Component {
 const styles = StyleSheet.create({
     managerDiv: {
         flex: 1,
-        backgroundColor: 'green',
+        borderRadius: 4,
+        borderWidth: 0.5,
+        borderColor: '#000000',
+        backgroundColor: '#43AD29',
         justifyContent: 'center',
         alignItems: 'center'
       }
