@@ -1,18 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Button, Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-export const returnButton = () => {
-    return (
-        <View style={styles.returnButton}>
-            <button><Icon name='ios-arrow-round-back' color='#000' size={30}></Icon></button>
-        </View>
-    )
+export default class ReturnButton extends React.Component {
+    render() {
+        return (
+            <View style={styles.returnButton}>
+                <Button title=''><Icon name='ios-arrow-round-back' size={30}></Icon></Button>
+            </View>
+        )
+    }
 }
 
 const styles = StyleSheet.create({
     returnButton: {
-        flex: 1,
-        justifyContent: 'flex-start',
+        width: '24px',
+        height: '12px',
     }
 })

@@ -5,7 +5,7 @@ import ChatNav from './components/chatComponents/ChatNav.js';
 import ManagerNav from './components/managerComponents/ManagerNav.js';
 import ScheduleNav from './components/scheduleComponents/ScheduleNav.js';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import ChatMain from './components/chatComponents/chat/chatMain';
+import { createStackNavigator } from 'react-navigation'
 
 export default class App extends React.Component {
   render() {
