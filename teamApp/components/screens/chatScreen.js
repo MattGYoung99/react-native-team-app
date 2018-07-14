@@ -6,16 +6,39 @@ import {
 } from 'react-navigation';
 import { createMaterialTopTabNavigator } from 'react-navigation';
 
-class ChatScreen extends React.Component {
+class PublicScreen extends React.Component {
     render() { 
         return(
             <View>
-            
+                <Text>This is the Public Screen</Text>
             </View>
         );
     }
 }
 
-export default createMaterialTopTabNavigator({
-    
-})
+class PrivateScreen extends React.Component {
+    render() { 
+        return(
+            <View>
+                <Text>This is the Private Screen</Text>
+            </View>
+        );
+    }
+}
+class GeneralScreen extends React.Component {
+    render() { 
+        return(
+            <View>
+                <Text>This is the General Screen</Text>
+            </View>
+        );
+    }
+}
+
+const ChatScreenTabNavigator = createMaterialTopTabNavigator(
+    {
+        Public: PublicScreen,
+        Private: PrivateScreen,
+        General: GeneralScreen
+    },
+)
