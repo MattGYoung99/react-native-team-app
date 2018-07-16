@@ -1,10 +1,19 @@
 import React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import {
-    createStackNavigator,
-} from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
 import { createMaterialTopTabNavigator } from 'react-navigation';
+
+
+export default class ChatScreen extends React.Component {
+    render() {
+        return (
+            <SafeAreaView>
+                <ChatScreenTabNavigator/>
+            </SafeAreaView>
+        )
+    }
+}
 
 class PublicScreen extends React.Component {
     render() { 
@@ -25,6 +34,7 @@ class PrivateScreen extends React.Component {
         );
     }
 }
+
 class GeneralScreen extends React.Component {
     render() { 
         return(
@@ -37,8 +47,14 @@ class GeneralScreen extends React.Component {
 
 const ChatScreenTabNavigator = createMaterialTopTabNavigator(
     {
-        Public: PublicScreen,
-        Private: PrivateScreen,
-        General: GeneralScreen
+        Public: {
+             screen: PublicScreen
+        },
+        Private: {
+             screen: PrivateScreen 
+        },
+        General: {
+             screen: GeneralScreen 
+        }
     },
 )
