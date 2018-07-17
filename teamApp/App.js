@@ -1,9 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 import BugsNav from './components/bugsComponents/BugsNav.js';
 import ChatNav from './components/chatComponents/ChatNav.js';
 import ManagerNav from './components/managerComponents/ManagerNav.js';
 import ScheduleNav from './components/scheduleComponents/ScheduleNav.js';
+import ChatScreen from  './components/chatComponents/chatScreen.js';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { createStackNavigator } from 'react-navigation';
 

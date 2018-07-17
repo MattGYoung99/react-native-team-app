@@ -35,26 +35,31 @@ class PrivateScreen extends React.Component {
     }
 }
 
-class GeneralScreen extends React.Component {
-    render() { 
-        return(
-            <View>
-                <Text>This is the General Screen</Text>
-            </View>
-        );
-    }
-}
 
 const ChatScreenTabNavigator = createMaterialTopTabNavigator(
     {
         Public: {
-             screen: PublicScreen
+             screen: PublicScreen,
+             navigationOptions: {
+                tabBarLabel: 'Public',
+                tabBarIcon:({tintColor})=>(
+                    <Icon name='ios-person' color={tintColor} size={24}/>
+                )
+             }
         },
         Private: {
-             screen: PrivateScreen 
+             screen: PrivateScreen,
+             navigationOptions: {
+                tabBarLabel: 'Private',
+                tabBarIcon:({tintColor})=>(
+                    <Icon name='ios-people' color={tintColor} size={24}/>
+                )
+             }
         },
-        General: {
-             screen: GeneralScreen 
-        }
     },
+    {
+        initialRouteName: 'Public',
+        order: ['Public', 'Private'],
+        activeTintColor: 'orange',
+    }
 )
