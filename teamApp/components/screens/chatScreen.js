@@ -19,7 +19,7 @@ class PublicScreen extends React.Component {
     render() { 
         return(
             <View>
-                <Text>This is the Public Screen</Text>
+                <Button title='Go to Private Messages' onPress={()=>this.props.navigation.navigate('Public')}/>
             </View>
         );
     }
@@ -29,7 +29,7 @@ class PrivateScreen extends React.Component {
     render() { 
         return(
             <View>
-                <Text>This is the Private Screen</Text>
+                <Button title='Go to Public Chat' onPress={()=>this.props.navigation.navigate('Private')}/>
             </View>
         );
     }

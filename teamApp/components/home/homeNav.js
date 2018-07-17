@@ -1,19 +1,22 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+import ChatScreen from '../screens/chatScreen';
+import { createStackNavigator } from 'react-navigation';
 
-export class ChatNav extends React.Component {
+
+ class ChatNav extends React.Component {
     render() {
         return (
             <View style={styles.quarterDiv}>
                 <Icon name='ios-chatboxes' color="#fff" size={90}/>
-                <Text>Chat</Text>
+                <Button title='Chat' onPress={()=>navigation.navigate('ChatScreen')} />
             </View>
         )
     }
 }
 
-export class ScheduleNav extends React.Component {
+ class ScheduleNav extends React.Component {
     render() {
         return (
             <View style={styles.quarterDiv}>
@@ -24,7 +27,7 @@ export class ScheduleNav extends React.Component {
     }
 }
 
-export class BugsNav extends React.Component {
+ class BugsNav extends React.Component {
     render() {
         return (
             <View style={styles.quarterDiv}>
@@ -35,7 +38,7 @@ export class BugsNav extends React.Component {
     }   
 }
 
-export class ManagerNav extends React.Component {
+ class ManagerNav extends React.Component {
     render() {
         return (
             <View style={styles.quarterDiv}>
@@ -46,6 +49,39 @@ export class ManagerNav extends React.Component {
     }
 }
 
+ const HomeNavigator = createStackNavigator({
+    ChatNav: { screen: ChatScreen},
+    ScheduleNav: { screen: ChatScreen },
+    ManagerNav: { screen: ChatScreen },
+    BugsNav: { screen: ChatScreen}
+})
+
+
+// <View style={styles.topRow}>
+// <ChatNav/>
+// <ScheduleNav/>
+// </View>
+// <View style={styles.bottomRow}>
+// <ManagerNav/>
+// <BugsNav/>
+// </View>
+export default class Home extends React.Component {
+    render() {
+        return (
+        <View style={styles.container}>
+            <View style={styles.topRow}>
+                <ChatNav/>
+                <ScheduleNav/>
+            </View>
+            <View style={styles.bottomRow}>
+                <ManagerNav/>
+                <BugsNav/>
+            </View>
+        </View>
+        )
+    }
+  }
+  
 const styles = StyleSheet.create({
     quarterDiv: {
         flex: 1,
@@ -56,6 +92,19 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center'
     },
+    container: {
+        flex: 1,
+        flexDirection: 'column',
+        backgroundColor: '#fff',
+      },
+      topRow: {
+        flex: 1,
+        flexDirection: 'row'
+      },
+      bottomRow: {
+        flex: 1,
+        flexDirection: 'row'
+      }
 })
 
 
