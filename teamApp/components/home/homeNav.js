@@ -7,11 +7,10 @@ import { createStackNavigator } from 'react-navigation';
 
 class ChatNav extends React.Component {
     render() {
-        const {navigate} = this.props.navigation;
+        const { navigate } = this.props.navigation;
         return (
             <View style={styles.quarterDiv}>
-                <Icon name='ios-chatboxes' color="#fff" size={90}/>
-                <Button title='Chat' onPress={()=>navigate('ChatScreen')} />
+                <Button title='Chat' onPress={()=>navigate('Chat')} />
             </View>
         )
     }
@@ -50,9 +49,9 @@ class ChatNav extends React.Component {
     }
 }
 
-const ChatStack = createStackNavigator({
+const HomeNavigation = createStackNavigator({
     ChatNav: { 
-        screen: ChatScreen
+        screen: ChatScreen,
     },
 })
 
@@ -68,7 +67,16 @@ const ChatStack = createStackNavigator({
 export default class Home extends React.Component {
     render() {
         return (
-                <ChatStack/>
+            <View style={styles.container}>
+                <View style={styles.topRow}>
+                    <HomeNavigation/>
+                    <ScheduleNav/>
+                </View>
+                <View style={styles.bottomRow}>
+                    <ManagerNav/>
+                    <BugsNav/>
+                </View>
+            </View>
         )
     }
   }

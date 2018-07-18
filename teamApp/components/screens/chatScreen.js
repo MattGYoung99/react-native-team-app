@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button, StyleSheet, Text, View, SafeAreaView } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { Button, StyleSheet, Text, View} from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 import { createStackNavigator } from 'react-navigation';
 import { createMaterialTopTabNavigator } from 'react-navigation';
 
@@ -8,18 +8,17 @@ import { createMaterialTopTabNavigator } from 'react-navigation';
 export default class ChatScreen extends React.Component {
     render() {
         return (
-            <SafeAreaView>
                 <ChatScreenTabNavigator/>
-            </SafeAreaView>
         )
     }
 }
 
 class PublicScreen extends React.Component {
     render() { 
+        const { navigate } = this.props.navigation;
         return(
             <View>
-                <Button title='Go to Private Messages' onPress={()=>this.props.navigation.navigate('Public')}/>
+                <Button title='Go to Private Messages' onPress={()=>navigate('Private')}/>
             </View>
         );
     }
@@ -27,9 +26,10 @@ class PublicScreen extends React.Component {
 
 class PrivateScreen extends React.Component {
     render() { 
+        const { navigate } = this.props.navigation;
         return(
             <View>
-                <Button title='Go to Public Chat' onPress={()=>this.props.navigation.navigate('Private')}/>
+                <Button title='Go to Public Chat' onPress={()=>navigate('Public')}/>
             </View>
         );
     }
@@ -42,7 +42,7 @@ const ChatScreenTabNavigator = createMaterialTopTabNavigator(
              screen: PublicScreen,
              navigationOptions: {
                 tabBarLabel: 'Public',
-                tabBarIcon:({tintColor})=>(
+                tabBarIcon: ({tintColor}) => (
                     <Icon name='ios-person' color={tintColor} size={24}/>
                 )
              }
@@ -51,7 +51,7 @@ const ChatScreenTabNavigator = createMaterialTopTabNavigator(
              screen: PrivateScreen,
              navigationOptions: {
                 tabBarLabel: 'Private',
-                tabBarIcon:({tintColor})=>(
+                tabBarIcon: ({tintColor}) => (
                     <Icon name='ios-people' color={tintColor} size={24}/>
                 )
              }
