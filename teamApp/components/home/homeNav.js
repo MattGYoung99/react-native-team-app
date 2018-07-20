@@ -55,15 +55,6 @@ const HomeNavigation = createStackNavigator({
     },
 })
 
-
-// <View style={styles.topRow}>
-// <ChatNav/>
-// <ScheduleNav/>
-// </View>
-// <View style={styles.bottomRow}>
-// <ManagerNav/>
-// <BugsNav/>
-// </View>
 export default class Home extends React.Component {
     render() {
         return (

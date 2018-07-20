@@ -30,7 +30,7 @@ class PrivateScreen extends React.Component {
         return(
             <View>
                 <Button title='Go to Public Chat' onPress={()=>navigate('Public')}/>
-            </View>
+            </View> 
         );
     }
 }
